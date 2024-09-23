@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body{
+  display: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color:rgb(240, 240, 240)
+  
+}
+
+.home {
+    display: flex;
+    overflow: scroll;
+   
+  }
+  
+.Inicio {
+    width: 70%;
+    position: relative; /* Agrega position: relative al contenedor */
+}
+
+.Inicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+span{
+    color:#3b3b3b;
+}
+
+.home h1{
+    position: absolute; /* Agrega position: absolute al texto */
+    top: 30%; /* Centra el texto verticalmente */
+    left: 23%; /* Centra el texto horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición del texto */
+    color: #fff; /* Agrega un color de texto blanco */
+    z-index: 1; /* Asegura que el texto esté encima de la imagen */
+    font-size: 3.5rem;  
+    font-weight: 600;
+    line-height: 1.5;
+  }
+.home h3{
+    position: absolute; /* Agrega position: absolute al texto */
+    top: 44%; /* Centra el texto verticalmente */
+    left: 23%; /* Centra el texto horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición del texto */
+    color: #3b3b3b; /* Agrega un color de texto blanco */
+    z-index: 1; /* Asegura que el texto esté encima de la imagen */
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.centro-texto h2{
+    font-weight: 800; /*Grosor*/
+    font-size: 32px ; /*Tamano*/
+    text-align: center;
+    margin-top: 2em;
+    color: #3b3b3b;
+}
+.productos{
+    display: grid; /*responsive*/
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));/* aumenta el tamaño de las columnas */
+    gap: 2rem;/*da un espacion en un contendedor*/
+    margin-bottom: 6em;
+    padding: 30px; /* Agrega padding al contenedor .productos */
+}
+.row{
+    background-color: rgb(255, 255, 255,0.301);
+    position: relative;
+    backdrop-filter: blur(20px);
+    transition: 0.4s ease;
+    border: 1px solid rgba(235,235,235);
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    max-width: 100%; /* Ajusta el ancho del contenedor .row */
+    
+}
+
+.row img{
+   width: 100%; 
+   height: auto ;
+   margin-bottom: 10px;
+   margin-right: 10px;
+   border-radius: 7px;
+   
+}
+.row:hover{
+    transform: scale(1.03);/*un movimiento*/
+}
+
+.row #heart{
+    color: rgb(232, 75, 75);
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+.row #heart:hover{
+    text-shadow: 0 0 20px red,
+                 0 0 30px red;
+}
+
+.row #star{
+    color: rgb(78, 78, 78);
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+ #start:hover{
+    text-shadow: 0 0 20px rgb(78, 78, 78),
+                 0 0 30px rgb(78, 78, 78);;
+}
+
+.precios h4{
+    color: rgb(41, 41, 41);
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 0.5em;
+}
+.precios p{
+    color: rgb(41, 41, 41);
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 0.5em;
+}
+.comprar{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    border: 2px solid transparent;
+    color:black;
+    transition: 0.3s ease;
+    font-weight:500;
+}
+
+.comprar{
+    font: size 18px; ;
+}
+.comprar:hover{
+    background-color: transparent;
+    color: rgb(54, 53, 53);
+}
+
+.text-animation{
+    font-size: 35px;
+    font-weight: 600;
+    min-height: 60px;
+    margin: 10px 0;
+    }
+    .text-animation span{
+        position: relative;
+    }
+    
+    .text-animation span::before{
+        content: "Jeans";
+        color: rgba(235,235,235) ;
+        animation: words 25s infinite;
+    }
+    
+    .text-animation span::after{
+        content: "";
+        background-color: rgba(12, 12, 12, 0.5); /* Cambiado a rgba con opacidad 0.5 */
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid  rgba(12, 12, 12, 0.5);;
+        right: -8px;
+        animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+      }
+    @keyframes cursor{
+        to{
+            border-left: 2px solid rgba(235,235,235);
+        }
+    }
+    @keyframes words{
+        0%,
+        20%{
+            content: "Jeans";
+        }
+        21%,
+        40%{
+            content: "Mooms Jeans"
+        }
+        41%,
+        60%{
+            content: "Boodys";
+        }
+        61%,
+        80%{
+            content: "Skiny Jeans";
+        }
+        81%,
+        100%{
+            content: "Leggins";
+        }
+    }
+    @keyframes typing{
+        10%,
+        15%, 
+        30%,
+        35%,
+        50%,55%,70%,75%,90%,95%{
+            width: 0;
+        }
+        5%,20%,25%,40%,45%,60%,65%,80%,85%{
+            width: calc(100% + 8px);
+        }
+    }
+    #capa1{
+        width: 30%;
+        float: left;
+        margin-right: 2%;
+        color:#fff;
+        margin-bottom: 2%;
+    }
+    #capa2{
+        width: 30%;
+        float: left;
+        margin-right: 2%;
+        color: #fff;
+    }
+    #capa3{
+        width: 30%;
+        float:left;
+        color: #fff;
+    }
+    #capa4{
+        width:30%;
+        clear: both;
+        color: #fff;
+    }
+    
+    .capas{
+        background-color: rgb(29, 54,78); 
+    }
+
+    .Contacto {
+        width: 100%; /* Agrega un ancho al contenedor */
+        text-align: center; /* Centra el contenido */ 
+        margin-bottom: 5%;
+        margin-top: -5%;
+      }
+      .Contacto h2{
+        font-weight: 600; /*Grosor*/
+        font-size: 30px ; /*Tamano*/
+        text-align: center;
+        margin-top: 2em;
+        color: #3b3b3b;
+        margin-bottom: 2%;
+    }
+
+      .Contacto i {
+        color: rgb(78, 78, 78);
+        font-size: 25px;
+        display:block; 
+        margin-bottom: 2px;
+      }
